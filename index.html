@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Форма заказа</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <section class="left">
+                <div class="left__back"></div>
+                <span class="left__name">reduslim</span>
+                <span class="left__eco">eco</span>
+                <img src="./img/image_1.png" alt="Картинка с таблетками" class="left__img">
+                <div class="left__small"></div>
+                <div class="left__big"></div>
+            </section>
+            <section class="right">
+                <div class="right__back">
+                    <div class="right__head">
+                        <h1>Сделай шаг к выздоровлению</h1>
+                    </div>
+                    <div class="right__body">
+                        <form action="post">
+                            <label for="name">ваше <span class="green">имя</span></label>
+                            <input type="text" id="name" placeholder="Алексей" required>
+                            <label for="phone">ваш <span class="green">телефон</span></label>
+                            <div id="input_select">
+                                <input type="text" id="phone" placeholder="+7(123)45678-90" required>
+                                <div class="select">
+
+                                    <div class="select__header">
+                                        <span class="select__current">RU <img src="./img/flag.png" alt="Флаг"></span>
+                                        <div class="select__icon"><img src="./img/arrow-down.png" alt="Стрелка списка"></div>
+                                    </div>
+
+                                    <div class="select__body">
+                                        <div class="select__item">RU <img src="./img/flag.png" alt="Флаг"></div>
+                                        <div class="select__item">FR <img src="./img/flag.png" alt="Флаг"></div>
+                                        <div class="select__item">UK <img src="./img/flag.png" alt="Флаг"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button type="submit" value="Проверить">заказать <img src="./img/arrow.svg" alt=""></button>
+                        </form>
+                        <div class="right__secure">
+                            <a href="#">trusted</a>
+                            <img src="./img/lock.png" alt="Замок">
+                            <a href="#">secure</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
