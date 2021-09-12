@@ -249,7 +249,7 @@ button > img {
   color: red;
   font-size: 10px;
   width: 255px;
-  height: 20px;
+  height: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -367,7 +367,7 @@ button > img {
     left: 7%;
   }
   .left__eco {
-    left: 81%;
+    left: 82%;
   }
   .left__name, .left__eco {
     color: black;
@@ -401,7 +401,7 @@ button > img {
     max-width: 280px;
     max-height: 310px;
     margin: 0 auto;
-    padding: 0 0 0 0;
+    padding: 0;
   }
   .right__secure {
     visibility: visible;
@@ -423,11 +423,11 @@ button > img {
   }
 
   #input_select {
-    margin-bottom: 27px;
+    margin-bottom: 7px;
   }
 
   #name {
-    margin-bottom: 18px;
+    margin-bottom: -4px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
