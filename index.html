@@ -30,9 +30,12 @@
                         <h1>Сделай шаг к выздоровлению</h1>
                     </div>
                     <div class="right__body">
-                        <form action="post">
+                        <form>
                             <label for="name">ваше <span class="green">имя</span></label>
                             <input type="text" id="name" placeholder="Алексей" required>
+                            <div class="right__error-name hidden">
+                                <p style="margin: 0">Используйте только буквы</p>
+                            </div>
                             <label for="phone">ваш <span class="green">телефон</span></label>
                             <div id="input_select">
                                 <input type="text" id="phone" placeholder="+7(123)45678-90" required>
@@ -51,7 +54,12 @@
 
                                 </div>
                             </div>
-                            <button type="submit" value="Проверить">заказать <img src="./img/arrow.svg" alt=""></button>
+                            <div class="right__error-phone hidden">
+                                <p style="margin: 0">
+                                    Введите верный номер телефона
+                                </p>
+                            </div>
+                            <button type="submit" value="Проверить" class="auth">заказать <img src="./img/arrow.svg" alt=""></button>
                         </form>
                         <div class="right__secure">
                             <a href="#">trusted</a>
