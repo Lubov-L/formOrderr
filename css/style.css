@@ -173,7 +173,9 @@ label {
 
 #name,
 #phone,
-.select {
+.select,
+.true__name,
+.true__phone {
   height: 50px;
   background: #F8F8F8;
   border: 1px solid #E4E4E4;
@@ -182,16 +184,19 @@ label {
   border-radius: 5px;
 }
 
-#name {
+#name,
+.true__name {
   width: 100%;
 }
 
 #name,
-#input_select {
+#input_select,
+.true__name {
   margin-bottom: 7px;
 }
 
-#phone {
+#phone,
+.true__phone {
   max-width: 184px;
   margin-right: 12px;
 }
@@ -256,6 +261,11 @@ button > img {
 
 .hidden {
   visibility: hidden;
+}
+
+.true__name,
+.true__phone {
+  border: 3px solid #00ff00;
 }
 
 .select {
@@ -324,6 +334,10 @@ button > img {
 
 .select.is-active .select__body {
   display: block;
+}
+
+p {
+  margin: 0;
 }
 
 @media screen and (min-width: 960px) and (max-width: 1280px) {

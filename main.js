@@ -36,25 +36,32 @@ select();
         errorName = document.querySelector(".right__error-name"),
         errorPhone = document.querySelector(".right__error-phone");
 
-    function submitForm(evt) {
-        const loginPhoneRegEx = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    function submitName(evt) {
+        const loginNameRegEx = /^[\w'\-,.][^0-9_!¡?÷¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
+        const isNameValid = loginNameRegEx.test(loginName.value);
 
-        const isNameValid =
-            loginName.value.length > 3 && loginName.value.trim() !== "";
-        const isPhoneValid = loginPhoneRegEx.test(loginPhone.value);
-        const isFormValid = isNameValid && isPhoneValid;
-
-        if (isFormValid) {
-            loginName.classList.remove("invalid");
-            loginPhone.classList.remove("invalid");
+        if (isNameValid) {
+            loginName.removeAttribute('id');
+            loginName.classList.add("true__name");
         } else {
             evt.preventDefault();
-            loginName.classList.add("invalid");
-            loginPhone.classList.add("invalid");
-            errorPhone.classList.remove("hidden");
             errorName.classList.remove("hidden");
         }
     }
 
-    authButton.addEventListener("click", submitForm);
+    function submitPhone(evt){
+        const loginPhoneRegEx = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+        const isPhoneValid = loginPhoneRegEx.test(loginPhone.value);
+
+        if (isPhoneValid) {
+            loginPhone.removeAttribute('id');
+            loginPhone.classList.add("true__phone");
+        } else {
+            evt.preventDefault();
+            errorPhone.classList.remove("hidden");
+        }
+    }
+
+    authButton.addEventListener("click", submitName);
+    authButton.addEventListener("click", submitPhone);
 })();
